@@ -1,0 +1,63 @@
+:root {
+  --slogan: 0
+}
+
+#welcome {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  margin: 0;
+  background: black;
+  background-size: 100% 100%;
+  transform: translateZ(0);
+  animation: diyBounce 2.5s linear forwards;
+  transition: .6s;
+}
+.container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.to-home {
+  border: 3px solid black;
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  text-shadow: 0px 0px 5px black;
+  padding: 20px 50px 20px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  box-sizing: border-box;
+  height: 64px;
+  box-shadow: 0 0 5px #fff;
+}
+.to-home:hover {
+  border: 2px solid #fff;
+  background: rgba(28, 94, 235, 0.5);
+}
+.one-sentence {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  font-size: 24px;
+  font-weight: lighter;
+  transition: 1.5s;
+  cursor: default;
+  opacity: var(--slogan);
+}

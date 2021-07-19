@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nodejs操作mysql | one nice blog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/jscodev.ico">
+    <meta name="description" content="knowledge sharing">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    
+    <link rel="preload" href="/assets/css/0.styles.60d486a0.css" as="style"><link rel="preload" href="/assets/js/app.f47b2c40.js" as="script"><link rel="preload" href="/assets/js/2.af72bc87.js" as="script"><link rel="preload" href="/assets/js/26.6b4e0d48.js" as="script"><link rel="preload" href="/assets/js/7.2e35d67b.js" as="script"><link rel="prefetch" href="/assets/js/10.a9bf79bb.js"><link rel="prefetch" href="/assets/js/11.a427e81e.js"><link rel="prefetch" href="/assets/js/12.0b2b7aa0.js"><link rel="prefetch" href="/assets/js/13.b6b3a056.js"><link rel="prefetch" href="/assets/js/14.64749a17.js"><link rel="prefetch" href="/assets/js/15.da68acb7.js"><link rel="prefetch" href="/assets/js/16.8674dabe.js"><link rel="prefetch" href="/assets/js/17.a549c9d8.js"><link rel="prefetch" href="/assets/js/18.9389fd29.js"><link rel="prefetch" href="/assets/js/19.c39a071e.js"><link rel="prefetch" href="/assets/js/20.1dece8a0.js"><link rel="prefetch" href="/assets/js/21.13812f92.js"><link rel="prefetch" href="/assets/js/22.05fd8773.js"><link rel="prefetch" href="/assets/js/23.17941b85.js"><link rel="prefetch" href="/assets/js/24.7023415c.js"><link rel="prefetch" href="/assets/js/25.1f5804ca.js"><link rel="prefetch" href="/assets/js/27.1b788c1d.js"><link rel="prefetch" href="/assets/js/28.af72a96f.js"><link rel="prefetch" href="/assets/js/29.9c6f3345.js"><link rel="prefetch" href="/assets/js/3.fdb7c397.js"><link rel="prefetch" href="/assets/js/4.9c26f943.js"><link rel="prefetch" href="/assets/js/5.d3f16d5a.js"><link rel="prefetch" href="/assets/js/6.231eabe3.js"><link rel="prefetch" href="/assets/js/8.25be8698.js"><link rel="prefetch" href="/assets/js/9.1875fa7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.60d486a0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">one nice blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="大前端" class="mobile-dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/full-stack-f/vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/full-stack-f/vue-router/" class="nav-link">
+  Vue-Router
+</a></li><li class="dropdown-item"><!----> <a href="/full-stack-f/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-item"><h4>
+          Javascript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/full-stack-f/javascript/es/" class="nav-link">
+  ECMAScript
+</a></li><li class="dropdown-subitem"><a href="/full-stack-f/javascript/js/" class="nav-link">
+  JavaScript
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="全栈之巅" class="dropdown-title"><span class="title">全栈之巅</span> <span class="arrow down"></span></button> <button type="button" aria-label="全栈之巅" class="mobile-dropdown-title"><span class="title">全栈之巅</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/full-stack-r/mysql/" class="nav-link">
+  Mysql
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/computer/http/" class="nav-link">
+  http
+</a></li></ul></div></div><div class="nav-item"><a href="https://juejin.im/user/844055260962855" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="大前端" class="mobile-dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/full-stack-f/vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/full-stack-f/vue-router/" class="nav-link">
+  Vue-Router
+</a></li><li class="dropdown-item"><!----> <a href="/full-stack-f/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-item"><h4>
+          Javascript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/full-stack-f/javascript/es/" class="nav-link">
+  ECMAScript
+</a></li><li class="dropdown-subitem"><a href="/full-stack-f/javascript/js/" class="nav-link">
+  JavaScript
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="全栈之巅" class="dropdown-title"><span class="title">全栈之巅</span> <span class="arrow down"></span></button> <button type="button" aria-label="全栈之巅" class="mobile-dropdown-title"><span class="title">全栈之巅</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/full-stack-r/mysql/" class="nav-link">
+  Mysql
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/computer/http/" class="nav-link">
+  http
+</a></li></ul></div></div><div class="nav-item"><a href="https://juejin.im/user/844055260962855" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>nodejs操作mysql</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/full-stack-r/nodejs/#nodejs操作mysql" class="sidebar-link">nodejs操作mysql</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/full-stack-r/nodejs/#path-join和path-resolve的区别" class="sidebar-link">path.join和path.resolve的区别</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/full-stack-r/nodejs/#stream-流" class="sidebar-link">stream 流</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/full-stack-r/nodejs/#crypto加密" class="sidebar-link">crypto加密</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/full-stack-r/nodejs/#hmac" class="sidebar-link">Hmac</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="nodejs操作mysql"><a href="#nodejs操作mysql" class="header-anchor">#</a> nodejs操作mysql</h2> <p>首先 <code>npm install mysql --save</code>安装依赖，然后项目引入:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> mysql<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mysql'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 引入mysql</span>
+
+<span class="token keyword">var</span> connection <span class="token operator">=</span> mysql<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  host<span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+  user<span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+  password<span class="token operator">:</span> <span class="token string">'123456'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 创建连接</span>
+
+</code></pre></div><ul><li><p>host：主机地址 （默认：localhost）</p></li> <li><p>user：用户名</p></li> <li><p>password：密码</p></li> <li><p>port：端口号 （默认：3306）</p></li> <li><p>database：数据库名</p></li> <li><p>charset：连接字符集（默认：'UTF8_GENERAL_CI'，注意字符集的字母都要大写）</p></li> <li><p>localAddress：此IP用于TCP连接（可选）</p></li> <li><p>socketPath：连接到unix域路径，当使用 host 和 port 时会被忽略</p></li> <li><p>timezone：时区（默认：'local'）</p></li> <li><p>connectTimeout：连接超时（默认：不限制；单位：毫秒）</p></li> <li><p>stringifyObjects：是否序列化对象（默认：'false' ；与安全相关https://github.com/felixge/node-mysql/issues/501）</p></li> <li><p>typeCast：是否将列值转化为本地JavaScript类型值 （默认：true）</p></li> <li><p>queryFormat：自定义query语句格式化方法 https://github.com/felixge/node-mysql#custom-format</p></li> <li><p>supportBigNumbers：数据库支持bigint或decimal类型列时，需要设此option为true （默认：false）</p></li> <li><p>bigNumberStrings：supportBigNumbers和bigNumberStrings启用 强制bigint或decimal列以JavaScript字符串类型返回（默认：false）</p></li> <li><p>dateStrings：强制timestamp,datetime,data类型以字符串类型返回，而不是JavaScript Date类型（默认：false）</p></li> <li><p>debug：开启调试（默认：false）</p></li> <li><p>multipleStatements：是否许一个query中有多个MySQL语句 （默认：false）</p></li></ul> <p>flags：用于修改连接标志，更多详情：https://github.com/felixge/node-mysql#connection-flags</p> <p>ssl：使用ssl参数（与crypto.createCredenitals参数格式一至）或一个包含ssl配置文件名称的字符串，目前只捆绑Amazon RDS的配置文件</p> <h2 id="path-join和path-resolve的区别"><a href="#path-join和path-resolve的区别" class="header-anchor">#</a> path.join和path.resolve的区别</h2> <ul><li><p>path.join是把各个path片段连接在一起</p></li> <li><p>path.resolve从后向前把‘／'当成根目录，遇到不带‘/’或者‘../’或‘./’继续向前拼</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>
+path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/a'</span><span class="token punctuation">,</span> <span class="token string">'/b'</span><span class="token punctuation">)</span> <span class="token comment">// Outputs '/a/b'</span>
+path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'/a'</span><span class="token punctuation">,</span> <span class="token string">'/b'</span><span class="token punctuation">)</span> <span class="token comment">// Outputs '/b'</span>
+
+</code></pre></div><h2 id="stream-流"><a href="#stream-流" class="header-anchor">#</a> stream 流</h2> <p>实力化一个读取流，参数详情：</p> <div class="language-js extra-class"><pre class="language-js"><code>
+ReadableState <span class="token punctuation">{</span>
+     objectMode<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否是object mode</span>
+     highWaterMark<span class="token operator">:</span> <span class="token number">16384</span><span class="token punctuation">,</span> <span class="token comment">// 最高水位点,默认是16KB,最大为8MB</span>
+     buffer<span class="token operator">:</span> BufferList <span class="token punctuation">{</span> head<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> tail<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> length<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// _read函数读取数据的地方</span>
+     length<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 整个可读流的数据大小(如果是object mode,则该值与buffer.length相等)</span>
+     pipes<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// 存储该可读流建立的所有的管道,如果多于1个,则是一个数组</span>
+     pipesCount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 管道的个数</span>
+     flowing<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// 标识可读流的模式</span>
+     ended<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否已经消费了所有的数据</span>
+     endEmitted<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否已经发送了结束的事件</span>
+     reading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否正在读取数据</span>
+     sync<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 标识'readable/data'事件是立即发送的还是等到下一个tick,我们默认设置为true.</span>
+     needReadable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否需要发送readable事件</span>
+     emittedReadable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否发送过readable事件</span>
+     readableListening<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否有readable监听事件</span>
+     resumeScheduled<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 标识有调用过resume方法</span>
+     defaultEncoding<span class="token operator">:</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token comment">// 默认编码</span>
+     ranOut<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 没有用到</span>
+     awaitDrain<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 标识在.pipe()s中等待一个drain事件的可写流的个数</span>
+     readingMore<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 标识是否可以读取更多数据</span>
+     decoder<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// 解码器,如果encoding有配置,那么该值是实例化一个string_decoder解码器</span>
+     encoding<span class="token operator">:</span> <span class="token keyword">null</span> <span class="token comment">// 编码配置</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+</code></pre></div><h2 id="crypto加密"><a href="#crypto加密" class="header-anchor">#</a> crypto加密</h2> <p><code>crypto</code>模块提供了加密功能，包括对 OpenSSL 的哈希、HMAC、加密、解密、签名、以及验证功能的一整套封装。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 引入</span>
+<span class="token keyword">const</span> crypto <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'crypto'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 创建md5</span>
+<span class="token keyword">const</span> hash <span class="token operator">=</span> crypto<span class="token punctuation">.</span><span class="token function">createHash</span><span class="token punctuation">(</span><span class="token string">'md5'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="hmac"><a href="#hmac" class="header-anchor">#</a> Hmac</h2> <p>Hmac算是一种增强哈希算法</p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">const</span> crypto <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'crypto'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> hmac <span class="token operator">=</span> crypto<span class="token punctuation">.</span><span class="token function">createHmac</span><span class="token punctuation">(</span><span class="token string">'sha256'</span><span class="token punctuation">,</span> <span class="token string">'secret-key'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f47b2c40.js" defer></script><script src="/assets/js/2.af72bc87.js" defer></script><script src="/assets/js/26.6b4e0d48.js" defer></script><script src="/assets/js/7.2e35d67b.js" defer></script>
+  </body>
+</html>
